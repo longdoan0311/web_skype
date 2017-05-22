@@ -2,7 +2,7 @@ var socket;
 $(document).ready(function () {
     encode('Hello World!');
     // console.log(encode('Hello World!'));
-    $("#chat").hide();
+    // $("#chat").hide();
 });
 function add_message(message, left_or_right) {
     socket.emit('chat message', {'username': name, 'msgcontent': message});
