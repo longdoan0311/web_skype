@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat</title>
+    <script src="/js/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/style.css"/>
+    <script src="/js/socket.io.js"></script>
+    <script src="/js/chat.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+</head>
+<body>
+<div id="name_chat" class="" style="">
+    <div class="form-group">
+    <label class="control-label col-sm-2" for="email">Enter my name: </label>
+    <div class="col-sm-10">
+        <input type="text" onchange="start_chat()" class="form-control" id="my_name" placeholder="Enter my name: " name="pwd">
+    </div>
+  </div>
+</div>
+<div id="chat">
+    <div class="chat_window">
+        <div class="top_menu">
+            <div class="buttons">
+                <div class="button close"></div>
+                <div class="button minimize"></div>
+                <div class="button maximize"></div>
+            </div>
+            <div class="title">Chat</div>
+        </div>
+        <ul class="messages"></ul>
+        <div class="bottom_wrapper clearfix">
+            <div class="message_input_wrapper"><input class="message_input" onkeypress="check_keyboard()" id="message_text"
+                                                      placeholder="Type your message here..."/></div>
+            <div class="send_message" onclick="send_message()">
+                <div class="icon"></div>
+                <div class="text noselect">Send</div>
+            </div>
+        </div>
+    </div>
+    <div class="message_template">
+        <li class="message">
+            <div class="avatar"></div>
+            <div class="text_wrapper">
+                <div class="text"></div>
+            </div>
+        </li>
+    </div>
+</div>
+<script type="text/javascript">
+    var name = {name};
+</script>
+</body>
+</html>
